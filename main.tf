@@ -2,11 +2,11 @@ provider "aws" {
   region = var.aws_region
 }
 
-resource "aws_s3_bucket" "terraform_state" {
-  bucket = var.s3_bucket_name
+resource "aws_s3_bucket_versioning" "example" {
+  bucket = aws_s3_bucket.terraform_state.id
 
-  versioning {
-    enabled = true
+  versioning_configuration {
+    status = "Enabled"
   }
 
   server_side_encryption_configuration {
