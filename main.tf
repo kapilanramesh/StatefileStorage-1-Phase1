@@ -27,20 +27,6 @@ resource "aws_s3_bucket" "terraform_state" {
   }
 }
 
-provider "aws" {
-  region = var.aws_region
-}
-
-resource "aws_instance" "web" {
-  ami           = "ami-07caf09b362be10b8"
-  instance_type = "t2.micro"
-
-  tags = {
-    Name        = "WebServer"
-    Environment = var.environment
-  }
-}
-
 resource "aws_dynamodb_table" "terraform_locks" {
   name           = var.dynamodb_table_name
   billing_mode   = "PAY_PER_REQUEST"
