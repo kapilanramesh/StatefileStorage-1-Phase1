@@ -4,13 +4,6 @@
 2. `variable.tf`
 3. `terraform.tfvars`
 4. `output.tf`
-
-- **Project Overview**
-- **Modules & Terraform Flow Explanation**
-- **Breakdown of each file**
-- **Setup & Usage Instructions**
-- **Outputs & Expected Results**
-- **Any relevant architecture or infra notes**
   
 ---
 
